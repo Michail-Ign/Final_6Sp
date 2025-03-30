@@ -15,13 +15,13 @@ import (
 var tpl = template.Must(template.ParseFiles("index.html"))
 
 // handleRoot хендлер(эндпоинт - "/"), который возвращает HTML из файла index.html
-func handleRoot(w http.ResponseWriter, r *http.Request) {
+func HandleRoot(w http.ResponseWriter, r *http.Request) {
 
 	tpl.Execute(w, nil)
 }
 
 // handleUpload обрабатывает POST эндпоинт - /upload
-func handleUpload(w http.ResponseWriter, r *http.Request) {
+func HandleUpload(w http.ResponseWriter, r *http.Request) {
 
 	//Получение файла из формы
 	myfile, _, err := r.FormFile("myFile")
