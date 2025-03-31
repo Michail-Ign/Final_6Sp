@@ -7,10 +7,8 @@ import (
 )
 
 const (
-	sign1 = ".-"
-	sign2 = "-."
-	sign3 = ".."
-	sign4 = "--"
+	sign1 = "."
+	sign2 = "-"
 )
 
 // Функция конвертирует код Морзе в текст
@@ -27,7 +25,7 @@ func ToConvert(text string) string {
 // Функция проверяет является ли строка текстом или кодом Морзе
 func IsTextMorse(text string) bool {
 
-	if strings.Contains(text, sign1) || strings.Contains(text, sign2) || strings.Contains(text, sign3) || strings.Contains(text, sign4) {
+	if strings.Contains(text, sign1) || strings.Contains(text, sign2) {
 		return true
 	}
 	return false
